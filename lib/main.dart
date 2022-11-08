@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:meindica/redefinir_senha.dart';
 
+import 'criar_conta.dart';
+import 'entrar.dart';
+
 void main() {
   runApp(MaterialApp(
       theme: ThemeData(fontFamily: 'Montserrat'),
@@ -90,7 +93,6 @@ class FirstScreen extends StatelessWidget {
   }
 }
 
-//Segunda Tela
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
@@ -115,67 +117,6 @@ class LoginScreen extends StatelessWidget {
           title: const Text('Tela de Login'),
         ),
         body: const LogScreen(),
-      ),
-    );
-  }
-}
-
-class LogScreen extends StatelessWidget {
-  const LogScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 20),
-            child: TextField(
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'E-mail ou Telefone'),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
-            child: TextFormField(
-                decoration: const InputDecoration(
-                    border: OutlineInputBorder(), labelText: 'Senha')),
-          ),
-          Padding(
-            padding: EdgeInsets.only(right: 250.0),
-            child: TextButton(
-              style: TextButton.styleFrom(
-                foregroundColor: Color.fromARGB(255, 59, 22, 161),
-                textStyle: const TextStyle(fontSize: 15),
-              ),
-              child: const Text(
-                'Esqueceu a senha?',
-                style: TextStyle(fontFamily: 'Montserrat'),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ForgotPassword()),
-                );
-              },
-            ),
-          ),
-          ElevatedButton(
-            style: TextButton.styleFrom(
-              foregroundColor: Color.fromARGB(255, 59, 22, 161),
-              textStyle:
-                  const TextStyle(fontSize: 30, fontFamily: 'Montserrat'),
-            ),
-            onPressed: () {},
-            child: const Text(
-              'Entrar',
-              textAlign: TextAlign.center,
-            ),
-          ),
-        ],
       ),
     );
   }
@@ -213,72 +154,6 @@ class CreateAccount extends StatelessWidget {
       ),
       backgroundColor: Colors.blueGrey,
       body: const AccountTexts(),
-    );
-  }
-}
-
-class AccountTexts extends StatelessWidget {
-  const AccountTexts({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: <Widget>[
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 20),
-            child: TextField(
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Nome Completo'),
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 20),
-            child: TextField(
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'CPF'),
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 20),
-            child: TextField(
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Telefone'),
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 20),
-            child: TextField(
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'CEP'),
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 20),
-            child: TextField(
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'E-mail'),
-            ),
-          ),
-          ElevatedButton(
-            style: TextButton.styleFrom(
-              foregroundColor: Color.fromARGB(255, 59, 22, 161),
-              textStyle: const TextStyle(
-                fontSize: 30,
-              ),
-            ),
-            onPressed: () {},
-            child: const Text(
-              'Criar conta',
-              style: TextStyle(fontSize: 20),
-              textAlign: TextAlign.center,
-            ),
-          ),
-        ],
-      ),
     );
   }
 }
