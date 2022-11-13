@@ -48,7 +48,7 @@ class AccountTexts extends StatelessWidget {
           ),
           ElevatedButton(
             style: TextButton.styleFrom(
-              foregroundColor: Color.fromARGB(255, 59, 22, 161),
+              foregroundColor: const Color.fromARGB(255, 59, 22, 161),
               textStyle: const TextStyle(
                 fontSize: 30,
               ),

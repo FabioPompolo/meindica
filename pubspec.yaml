@@ -86,5 +86,11 @@ flutter:
         - asset: fonts/Ubuntu/Ubuntu-Regular.ttf
           weight: 700
 
-    - family: 
+    - family: Open-Sans
+      fonts:
+        - asset: fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf
+          weight: 700
+
+      
+
 

@@ -16,7 +16,7 @@ class RedefinirSenha extends StatelessWidget {
                 border: OutlineInputBorder(), hintText: 'E-mail'),
           ),
         ),
-        Text(
+        const Text(
           'OU',
         ),
         const Padding(
@@ -28,7 +28,7 @@ class RedefinirSenha extends StatelessWidget {
         ),
         ElevatedButton(
           style: TextButton.styleFrom(
-            foregroundColor: Color.fromARGB(255, 59, 22, 161),
+            foregroundColor: const Color.fromARGB(255, 59, 22, 161),
             textStyle: const TextStyle(
               fontSize: 30,
             ),

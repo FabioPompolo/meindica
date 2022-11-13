@@ -33,7 +33,6 @@ class LogScreen extends StatelessWidget {
               ),
               child: const Text(
                 'Esqueceu a senha?',
-                style: TextStyle(fontFamily: 'Montserrat'),
               ),
               onPressed: () {
                 Navigator.push(
@@ -50,7 +49,12 @@ class LogScreen extends StatelessWidget {
               textStyle:
                   const TextStyle(fontSize: 30, fontFamily: 'Montserrat'),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const InitialScreen()),
+              );
+            },
             child: const Text(
               'Entrar',
               textAlign: TextAlign.center,
