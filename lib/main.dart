@@ -3,44 +3,50 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:meindica/redefinir_senha.dart';
 import 'criar_conta.dart';
 import 'entrar.dart';
-import 'tela_inicial.dart';
 
 void main() {
-  runApp(MaterialApp(
-      theme: ThemeData(fontFamily: 'OpenSans-Regular'),
-      title: 'First Screen',
-      home: const FirstScreen()));
+  runApp(const MyApp());
 }
 
-class FirstScreen extends StatelessWidget {
-  const FirstScreen({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: GoogleFonts.openSans().fontFamily),
-      home: Scaffold(
-        backgroundColor: Colors.blueGrey,
-        appBar: AppBar(
-          centerTitle: true,
-          title: const Text(
-            'ME INDICA',
-            style: TextStyle(fontFamily: 'OpenSans-Regular'),
-          ),
-          backgroundColor: Colors.orange,
-        ),
-        body: Center(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(useMaterial3: true).copyWith(
+        textTheme: GoogleFonts.openSansTextTheme(),
+      ),
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blueGrey,
+      appBar: null,
+      body: SafeArea(
+        minimum: const EdgeInsets.all(16.0),
+        child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Image.asset(
                 'assets/worker.png',
-                width: 200.0,
-                height: 200.0,
+                width: 270.0,
+                height: 270.0,
               ),
               const Text(
                 'ME INDICA',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 20, fontFamily: 'OpenSans-Regular'),
+                style: TextStyle(fontSize: 20),
               ),
               const SizedBox(
                 height: 110,
@@ -48,7 +54,7 @@ class FirstScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 style: TextButton.styleFrom(
-                  foregroundColor: Colors.red,
+                  foregroundColor: Colors.purple,
                   textStyle: const TextStyle(
                     fontSize: 30,
                   ),
@@ -96,26 +102,10 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(),
-      home: Scaffold(
-        backgroundColor: Colors.blueGrey,
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.blueGrey[900],
-          leading: IconButton(
-            color: Colors.white,
-            icon: const Icon(Icons.arrow_back),
-            iconSize: 20.0,
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-          centerTitle: true,
-          title: const Text('Tela de Login'),
-        ),
-        body: const LogScreen(),
-      ),
+    return const Scaffold(
+      backgroundColor: Colors.blueGrey,
+      appBar: null,
+      body: LogScreen(),
     );
   }
 }
@@ -125,17 +115,8 @@ class ForgotPassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blueGrey[900],
-          centerTitle: true,
-          title: const Text(
-            'Esqueci a senha',
-            style: TextStyle(),
-          ),
-        ),
-        backgroundColor: Colors.blueGrey,
-        body: const RedefinirSenha());
+    return const Scaffold(
+        appBar: null, backgroundColor: Colors.blueGrey, body: RedefinirSenha());
   }
 }
 
@@ -144,36 +125,10 @@ class CreateAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blueGrey[900],
-        centerTitle: true,
-        title: const Text('Criar nova conta'),
-      ),
+    return const Scaffold(
+      appBar: null,
       backgroundColor: Colors.blueGrey,
-      body: const AccountTexts(),
-    );
-  }
-}
-
-class InitialScreen extends StatelessWidget {
-  const InitialScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blueGrey[900],
-        centerTitle: true,
-        title: const Text('Me Indica'),
-      ),
-      backgroundColor: Colors.black,
-      body: const Center(
-          child: Text(
-        'initial Screen',
-        style: TextStyle(color: Colors.white),
-      )),
-      bottomNavigationBar: const MyBottomNavigationBar(),
+      body: AccountTexts(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'buttomnav.dart';
 import 'main.dart';
 
 class LogScreen extends StatelessWidget {
@@ -11,18 +12,32 @@ class LogScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 20),
+          const Text(
+            'Bem-vindo de volta!!',
+            style: TextStyle(fontSize: 30),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
             child: TextField(
               decoration: InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'E-mail ou Telefone'),
+                  prefixIcon: const Icon(Icons.person),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(50.0),
+                  ),
+                  hintText: 'E-mail ou Telefone'),
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
             child: TextFormField(
-                decoration: const InputDecoration(
-                    border: OutlineInputBorder(), labelText: 'Senha')),
+                obscureText: true,
+                enableSuggestions: false,
+                autocorrect: false,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(50.0),
+                    ),
+                    labelText: 'Senha')),
           ),
           Padding(
             padding: const EdgeInsets.only(right: 250.0),
@@ -52,7 +67,8 @@ class LogScreen extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const InitialScreen()),
+                MaterialPageRoute(
+                    builder: (context) => const BottomNavigationScreen()),
               );
             },
             child: const Text(

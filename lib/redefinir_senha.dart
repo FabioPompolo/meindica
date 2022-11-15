@@ -9,21 +9,28 @@ class RedefinirSenha extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 20),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
           child: TextField(
             decoration: InputDecoration(
-                border: OutlineInputBorder(), hintText: 'E-mail'),
+                prefixIcon: const Icon(Icons.person),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                hintText: 'E-mail'),
           ),
         ),
         const Text(
           'OU',
         ),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 20),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
           child: TextField(
             decoration: InputDecoration(
-                border: OutlineInputBorder(), hintText: 'Telefone'),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                hintText: 'Telefone'),
           ),
         ),
         ElevatedButton(
