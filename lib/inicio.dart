@@ -73,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                     foregroundColor: Colors.black,
                     minimumSize: const Size(125, 125)),
                 onPressed: () {},
-                child: const Text('Pintor', style: TextStyle(fontSize: 20)),
+                child: const Text('Jardineiro', style: TextStyle(fontSize: 20)),
               ),
             ),
             Align(
@@ -84,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                     foregroundColor: Colors.black,
                     minimumSize: const Size(125, 125)),
                 onPressed: () {},
-                child: const Text('Pintor', style: TextStyle(fontSize: 20)),
+                child: const Text('Pedreiro', style: TextStyle(fontSize: 20)),
               ),
             ),
             Align(
@@ -95,7 +95,7 @@ class HomeScreen extends StatelessWidget {
                     foregroundColor: Colors.black,
                     minimumSize: const Size(125, 125)),
                 onPressed: () {},
-                child: const Text('prof3', style: TextStyle(fontSize: 20)),
+                child: const Text('Montador', style: TextStyle(fontSize: 20)),
               ),
             ),
           ],
