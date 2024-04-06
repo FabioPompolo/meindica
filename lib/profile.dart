@@ -11,7 +11,7 @@ class ProfileScreen extends StatelessWidget {
           const CircleAvatar(
             radius: 50.0,
             backgroundImage: NetworkImage(
-                'https://static.wikia.nocookie.net/wowpedia/images/5/54/Gul%27dan_WoD.png/revision/latest?cb=20140808033405'),
+                'https://t.ctcdn.com.br/y83nUX4m-qsvDaK74oes12XsQd8=/1244x700/smart/i641694.jpeg'),
           ),
           const Text(
             "Meu Perfil",
@@ -29,29 +29,8 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: double.infinity,
-            child: OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                  side: const BorderSide(color: Colors.black)),
-              onPressed: () {},
-              child: const Text(
-                "Formas De Pagamentos",
-                style: TextStyle(color: Colors.black, fontSize: 20),
-              ),
-            ),
-          ),
-          SizedBox(
-            width: double.infinity,
-            child: OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                  side: const BorderSide(color: Colors.black)),
-              onPressed: () {},
-              child: const Text(
-                "Cupons",
-                style: TextStyle(color: Colors.black, fontSize: 20),
-              ),
-            ),
           ),
           SizedBox(
             width: double.infinity,

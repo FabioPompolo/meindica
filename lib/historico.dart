@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meindica/chat.dart';
 
 class HistoryScreen extends StatelessWidget {
   const HistoryScreen({super.key});
@@ -7,11 +8,19 @@ class HistoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Column(
-        children: const <Widget>[
-          Text(
-            'Últimos Serviços',
-            style: TextStyle(fontSize: 20),
-          ),
+        children: <Widget>[
+          TextButton(
+            style: ButtonStyle(
+              foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ChatScreen()),
+              );
+            },
+            child: const Text('Teste Página'),
+          )
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'list_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -47,7 +48,12 @@ class HomeScreen extends StatelessWidget {
                     foregroundColor: Colors.black,
                     minimumSize: const Size(125, 125),
                     maximumSize: const Size(125, 125)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ListScreen()),
+                  );
+                },
                 child:
                     const Text('Eletricista', style: TextStyle(fontSize: 19)),
               ),
