@@ -17,18 +17,6 @@ class ProfileScreen extends StatelessWidget {
             "Meu Perfil",
             style: TextStyle(fontSize: 30),
           ),
-          SizedBox(
-            width: double.infinity,
-            child: OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                  side: const BorderSide(color: Colors.black)),
-              onPressed: () {},
-              child: const Text(
-                "Chats",
-                style: TextStyle(color: Colors.black, fontSize: 20),
-              ),
-            ),
-          ),
           const SizedBox(
             width: double.infinity,
           ),

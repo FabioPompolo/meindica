@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meindica/chat.dart';
 
 class NearbyWorkerListItem {
   final String name;
@@ -19,21 +20,28 @@ class NearbyWorkerListItem {
 
 final List<NearbyWorkerListItem> mockedList = [
   NearbyWorkerListItem(
-    name: 'Paulo',
+    name: 'Usuário 1',
     avatarUrl:
-        'https://static.wikia.nocookie.net/boliverso/images/b/b8/Fotoclassicaguinalingua.jpg/revision/latest?cb=20230520191354&path-prefix=pt-br',
+        'https://i.pinimg.com/originals/ec/49/fa/ec49fa73a1c51e53c3eb437b96165a52.jpg',
     distance: 1.0,
     rating: 5,
-    category: 'p',
+    category: 'pintor',
   ),
   NearbyWorkerListItem(
-    name: 'Jailson',
+    name: 'Usuário 2',
     avatarUrl:
-        'https://avaazdo.s3.amazonaws.com/c4bf51b585c5bdfe0f5e8c8308572e56.png',
+        'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ22ZtrTy3CurIt0XDGGcnjgiP3Pi_O_5na9ChgbsfA5iGSRpwv',
     distance: 1.0,
     rating: 5,
-    category: 'e',
-  )
+    category: 'eletricista',
+  ),
+  NearbyWorkerListItem(
+      name: 'Usuario 3',
+      avatarUrl:
+          'https://pics.craiyon.com/2023-09-11/94f949721ac34f5394a8d1be63247fdc.webp',
+      distance: 2.0,
+      rating: 4,
+      category: 'mecânico')
 ];
 
 class ListScreen extends StatelessWidget {
@@ -42,16 +50,26 @@ class ListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blueGrey,
+        title: const Text('Profissionais perto de você'),
+      ),
       backgroundColor: Colors.blueGrey,
       body: ListView.builder(
           itemBuilder: (context, index) {
             final worker = mockedList[index];
             return ListTile(
+              onLongPress: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ChatScreen()),
+                );
+              },
               leading:
                   CircleAvatar(foregroundImage: NetworkImage(worker.avatarUrl)),
               title: Text(worker.name),
               subtitle: Text("${worker.distance}km"),
-              trailing: Text("${worker.rating} de 5"),
+              trailing: Text("${worker.category} "),
             );
           },
           itemCount: mockedList.length),
