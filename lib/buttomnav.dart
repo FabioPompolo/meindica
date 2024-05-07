@@ -22,17 +22,17 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: null,
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.grey.shade50,
       body: Center(
         child: _pages.elementAt(_selectedTab),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blueGrey[900],
+        backgroundColor: Colors.grey.shade400,
         onTap: handleItemTap,
         currentIndex: _selectedTab,
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.amber,
-        unselectedItemColor: Colors.purple,
+        selectedItemColor: Colors.blueAccent.shade400,
+        unselectedItemColor: Colors.black,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

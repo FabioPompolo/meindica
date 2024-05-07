@@ -29,11 +29,12 @@ class LogScreen extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
-            child: TextFormField(
+            child: TextField(
                 obscureText: true,
                 enableSuggestions: false,
                 autocorrect: false,
                 decoration: InputDecoration(
+                    prefixIcon: const Icon(Icons.lock),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50.0),
                     ),
@@ -43,7 +44,7 @@ class LogScreen extends StatelessWidget {
             padding: const EdgeInsets.only(right: 250.0),
             child: TextButton(
               style: TextButton.styleFrom(
-                foregroundColor: const Color.fromARGB(255, 59, 22, 161),
+                foregroundColor: Colors.black,
                 textStyle: const TextStyle(fontSize: 15),
               ),
               child: const Text(
@@ -60,7 +61,7 @@ class LogScreen extends StatelessWidget {
           ),
           ElevatedButton(
             style: TextButton.styleFrom(
-              foregroundColor: const Color.fromARGB(255, 59, 22, 161),
+              foregroundColor: Colors.black,
               textStyle:
                   const TextStyle(fontSize: 30, fontFamily: 'Montserrat'),
             ),

@@ -13,7 +13,7 @@ class RedefinirSenha extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
           child: TextField(
             decoration: InputDecoration(
-                prefixIcon: const Icon(Icons.person),
+                prefixIcon: const Icon(Icons.email),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(50.0),
                 ),
@@ -27,6 +27,7 @@ class RedefinirSenha extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
           child: TextField(
             decoration: InputDecoration(
+                prefixIcon: const Icon(Icons.phone),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(50.0),
                 ),
@@ -35,7 +36,7 @@ class RedefinirSenha extends StatelessWidget {
         ),
         ElevatedButton(
           style: TextButton.styleFrom(
-            foregroundColor: const Color.fromARGB(255, 59, 22, 161),
+            foregroundColor: Colors.black,
             textStyle: const TextStyle(
               fontSize: 30,
             ),

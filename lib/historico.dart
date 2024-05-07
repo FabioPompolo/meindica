@@ -18,7 +18,9 @@ class HistoryScreen extends StatelessWidget {
 
 class ChatContactsScreen extends StatelessWidget {
   final List<Contact> contacts = [
-    Contact(name: "Warrek Archyr"),
+    Contact(
+      name: "Warrek Archyr",
+    ),
     Contact(name: "Barrian Staedmon"),
   ];
 

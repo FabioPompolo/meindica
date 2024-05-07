@@ -20,7 +20,7 @@ class NearbyWorkerListItem {
 
 final List<NearbyWorkerListItem> mockedList = [
   NearbyWorkerListItem(
-    name: 'Usuário 1',
+    name: 'Arvin Dragen',
     avatarUrl:
         'https://i.pinimg.com/originals/ec/49/fa/ec49fa73a1c51e53c3eb437b96165a52.jpg',
     distance: 1.0,
@@ -28,7 +28,7 @@ final List<NearbyWorkerListItem> mockedList = [
     category: 'pintor',
   ),
   NearbyWorkerListItem(
-    name: 'Usuário 2',
+    name: 'Warrek Archyr',
     avatarUrl:
         'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ22ZtrTy3CurIt0XDGGcnjgiP3Pi_O_5na9ChgbsfA5iGSRpwv',
     distance: 1.0,
@@ -36,7 +36,7 @@ final List<NearbyWorkerListItem> mockedList = [
     category: 'eletricista',
   ),
   NearbyWorkerListItem(
-      name: 'Usuario 3',
+      name: 'Barrian Staedmon',
       avatarUrl:
           'https://pics.craiyon.com/2023-09-11/94f949721ac34f5394a8d1be63247fdc.webp',
       distance: 2.0,
@@ -51,10 +51,10 @@ class ListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.grey.shade400,
         title: const Text('Profissionais perto de você'),
       ),
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.grey.shade50,
       body: ListView.builder(
           itemBuilder: (context, index) {
             final worker = mockedList[index];

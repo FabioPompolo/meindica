@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
               ),
               ElevatedButton(
                 style: TextButton.styleFrom(
-                  foregroundColor: Colors.purple,
+                  foregroundColor: Colors.black,
                   textStyle: const TextStyle(
                     fontSize: 30,
                   ),
@@ -72,9 +72,9 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 40),
-              TextButton(
+              ElevatedButton(
                 style: TextButton.styleFrom(
-                  foregroundColor: const Color.fromARGB(255, 59, 22, 161),
+                  foregroundColor: Colors.black,
                   textStyle: const TextStyle(fontSize: 30),
                 ),
                 onPressed: () {
