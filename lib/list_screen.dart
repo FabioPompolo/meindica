@@ -62,7 +62,7 @@ class ListScreen extends StatelessWidget {
               onLongPress: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ChatScreen()),
+                  MaterialPageRoute(builder: (context) => const ChatScreen()),
                 );
               },
               leading:
