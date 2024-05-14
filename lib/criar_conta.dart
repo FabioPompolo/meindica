@@ -100,7 +100,6 @@ class _AccountTextsState extends State<AccountTexts> {
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12.0),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey),
                   borderRadius: BorderRadius.circular(50.0),
                 ),
                 child: DropdownButton<String>(
