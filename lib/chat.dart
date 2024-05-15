@@ -22,6 +22,7 @@ class ChatApp extends StatelessWidget {
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
   @override
+  // ignore: library_private_types_in_public_api
   _ChatScreenState createState() => _ChatScreenState();
 }
 
@@ -58,7 +59,7 @@ class _ChatScreenState extends State<ChatScreen> {
               itemCount: _messages.length,
               itemBuilder: (context, index) {
                 final message = _messages[index];
-                return ChatBubble(
+                return ChatStyle(
                   message: message,
                 );
               },
@@ -102,10 +103,11 @@ class Message {
   Message({required this.text, required this.sender});
 }
 
-class ChatBubble extends StatelessWidget {
+class ChatStyle extends StatelessWidget {
   final Message message;
 
-  const ChatBubble({required this.message});
+  // ignore: use_key_in_widget_constructors
+  const ChatStyle({required this.message});
 
   @override
   Widget build(BuildContext context) {
