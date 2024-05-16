@@ -1,7 +1,22 @@
 import 'package:flutter/material.dart';
 
-class AccountTexts extends StatelessWidget {
+const List<String> list = <String>[
+  'Pintor',
+  'Eletricista',
+  'Jardineiro',
+  'Cliente',
+];
+
+class AccountTexts extends StatefulWidget {
   const AccountTexts({super.key});
+
+  @override
+  // ignore: library_private_types_in_public_api
+  _AccountTextsState createState() => _AccountTextsState();
+}
+
+class _AccountTextsState extends State<AccountTexts> {
+  String? selectedValue;
 
   @override
   Widget build(BuildContext context) {
@@ -80,14 +95,54 @@ class AccountTexts extends StatelessWidget {
                     hintText: 'E-mail'),
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+                child: DropdownButton<String>(
+                  isExpanded: true,
+                  hint: const Text('Selecione sua profissão'),
+                  value: selectedValue,
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      selectedValue = newValue;
+                    });
+                  },
+                  items: list.map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                ),
+              ),
+            ),
             ElevatedButton(
               style: TextButton.styleFrom(
-                foregroundColor: const Color.fromARGB(255, 59, 22, 161),
+                foregroundColor: Colors.black,
                 textStyle: const TextStyle(
                   fontSize: 30,
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: const Text('Conta criada com sucesso!'),
+                    duration: const Duration(milliseconds: 1500),
+                    width: 280.0, // Width of the SnackBar.
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 8.0, // Inner padding for SnackBar content.
+                    ),
+                    behavior: SnackBarBehavior.floating,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                );
+              },
               child: const Text(
                 'Criar conta',
                 style: TextStyle(fontSize: 20),

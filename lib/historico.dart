@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 
 class HistoryScreen extends StatelessWidget {
@@ -56,6 +58,7 @@ class ChatContactsScreen extends StatelessWidget {
 class ChatScreen extends StatelessWidget {
   final Contact contact;
 
+  // ignore: prefer_const_constructors_in_immutables
   ChatScreen({required this.contact});
 
   @override

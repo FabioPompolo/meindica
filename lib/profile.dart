@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meindica/help.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -27,7 +28,7 @@ class ProfileScreen extends StatelessWidget {
                   side: const BorderSide(color: Colors.black)),
               onPressed: () {},
               child: const Text(
-                "Favoritos",
+                "Meus dados",
                 style: TextStyle(color: Colors.black, fontSize: 20),
               ),
             ),
@@ -37,7 +38,12 @@ class ProfileScreen extends StatelessWidget {
             child: OutlinedButton(
               style: OutlinedButton.styleFrom(
                   side: const BorderSide(color: Colors.black)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HelpScreen()),
+                );
+              },
               child: const Text(
                 "Ajuda",
                 style: TextStyle(color: Colors.black, fontSize: 20),

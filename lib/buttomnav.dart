@@ -13,7 +13,7 @@ class BottomNavigationScreen extends StatefulWidget {
 class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   int _selectedTab = 0;
   static const List<Widget> _pages = <Widget>[
-    HomeScreen(),
+    ListScreen(),
     HistoryScreen(),
     ProfileScreen(),
   ];
