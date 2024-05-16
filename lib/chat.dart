@@ -9,7 +9,6 @@ class ChatApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Chat App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -28,13 +27,14 @@ class ChatScreen extends StatefulWidget {
 
 class _ChatScreenState extends State<ChatScreen> {
   final List<Message> _messages = [
-    Message(text: "Boa tarde, tudo bem?", sender: MessageType.receiver),
+    Message(text: "Boa tarde, tudo bem?", sender: MessageType.sender),
     Message(
         text: "Estou com um problema elétrico na minha casa",
-        sender: MessageType.receiver),
-    Message(text: "Boa tarde!", sender: MessageType.sender),
+        sender: MessageType.sender),
+    Message(text: "Boa tarde!", sender: MessageType.receiver),
     Message(
-        text: "Quando podemos marcar uma visita?", sender: MessageType.sender),
+        text: "Quando podemos marcar uma visita?",
+        sender: MessageType.receiver),
   ];
 
   final TextEditingController _textController = TextEditingController();
@@ -73,7 +73,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   child: TextField(
                     controller: _textController,
                     decoration: const InputDecoration(
-                      hintText: 'Digite sua mensagem...',
+                      hintText: 'Digite sua mensagem',
                     ),
                   ),
                 ),

@@ -26,18 +26,6 @@ class ProfileScreen extends StatelessWidget {
             child: OutlinedButton(
               style: OutlinedButton.styleFrom(
                   side: const BorderSide(color: Colors.black)),
-              onPressed: () {},
-              child: const Text(
-                "Meus dados",
-                style: TextStyle(color: Colors.black, fontSize: 20),
-              ),
-            ),
-          ),
-          SizedBox(
-            width: double.infinity,
-            child: OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                  side: const BorderSide(color: Colors.black)),
               onPressed: () {
                 Navigator.push(
                   context,
