@@ -1,3 +1,12 @@
+import { initializeApp } from "firebase/app"
+
+import firebaseConfig from "./config.js"
+
+
+const app1 = initializeApp(firebaseConfig)
+
+export default app1
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
