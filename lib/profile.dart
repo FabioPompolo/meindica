@@ -29,7 +29,7 @@ class ProfileScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HelpScreen()),
+                  MaterialPageRoute(builder: (context) => const HelpScreen()),
                 );
               },
               child: const Text(
