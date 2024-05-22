@@ -132,9 +132,9 @@ class _AccountTextsState extends State<AccountTexts> {
                   SnackBar(
                     content: const Text('Conta criada com sucesso!'),
                     duration: const Duration(milliseconds: 1500),
-                    width: 280.0, // Width of the SnackBar.
+                    width: 280.0,
                     padding: const EdgeInsets.symmetric(
-                      horizontal: 8.0, // Inner padding for SnackBar content.
+                      horizontal: 8.0,
                     ),
                     behavior: SnackBarBehavior.floating,
                     shape: RoundedRectangleBorder(
