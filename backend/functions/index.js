@@ -47,7 +47,7 @@ app.get('/api/readitem/:item_id', (req, res) => {
     });
     
     // read all
-    app.get('/api/readall', (req, res) => {
+app.get('/api/readall', (req, res) => {
     (async () => {
     try {
     let query = db.collection('items');
