@@ -32,7 +32,6 @@ dependencies:
   flutter:
     sdk: flutter
     
-    
 
   location: ^5.0.3
 

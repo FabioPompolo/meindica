@@ -15,8 +15,7 @@ class HelpScreen extends StatelessWidget {
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
-              Navigator.of(context)
-                  .pop(); // Fecha a tela atual e volta para a tela anterior
+              Navigator.of(context).pop();
             },
           ),
         ),
@@ -47,7 +46,7 @@ class _DropdownButtonScreenState extends State<DropdownButtonScreen> {
   @override
   void initState() {
     super.initState();
-    _selectedOption = _options.first; // Defina o primeiro item como padrão
+    _selectedOption = _options.first;
   }
 
   @override
@@ -56,7 +55,7 @@ class _DropdownButtonScreenState extends State<DropdownButtonScreen> {
       appBar: AppBar(
         title: const Text('Suporte'),
       ),
-      backgroundColor: Colors.grey.shade50, // Cor de fundo da tela
+      backgroundColor: Colors.grey.shade50,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
