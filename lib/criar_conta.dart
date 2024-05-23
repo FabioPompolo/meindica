@@ -4,6 +4,7 @@ const List<String> list = <String>[
   'Pintor',
   'Eletricista',
   'Jardineiro',
+  'Pedreiro',
   'Cliente',
 ];
 
