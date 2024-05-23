@@ -41,7 +41,7 @@ final List<NearbyWorkerListItem> mockedList = [
           'https://pics.craiyon.com/2023-09-11/94f949721ac34f5394a8d1be63247fdc.webp',
       distance: 2.0,
       rating: 4,
-      category: 'mecânico')
+      category: 'Pedreiro')
 ];
 
 class ListScreen extends StatelessWidget {
