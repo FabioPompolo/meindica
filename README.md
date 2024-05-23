@@ -1,16 +1,11 @@
-# meindica
+Para rodar o aplicativo:
+Instale Android Studio e Visual Studio Code
+Instale o Flutter
+(OPCIONAL)No android studio, crie um emulador de android(recomendado Android 13)
+no vscode, clone ou selecione a paste do meindica
+Aperte F5
+Escolha como onde quer rodar o aplicativo(Recomendado: Edge, Chrome)
+Aguarda até que o programa abra na sua máquina.
 
-A new Flutter project.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Caso o programa apresente erros na programação ao abrir no vscode, basta ir no terminal do vscode e digitar "flutter pub get".

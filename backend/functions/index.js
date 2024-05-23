@@ -12,12 +12,12 @@ databaseURL: "https:/meindica.firebaseio.com"
 });
 const db = admin.firestore();
 
-//hello world
+
 app.get('/hello-world', (req, res) => {
     return res.status(200).send('Hello World!');
     });
 
-// create
+
 app.post('/api/create', (req, res) => {
     (async () => {
     try {
@@ -31,7 +31,7 @@ app.post('/api/create', (req, res) => {
     })();
 });
 
-// read item
+
 app.get('/api/readitem/:item_id', (req, res) => {
     (async () => {
     try {
@@ -46,7 +46,7 @@ app.get('/api/readitem/:item_id', (req, res) => {
     })();
     });
     
-    // read all
+
 app.get('/api/readall', (req, res) => {
     (async () => {
     try {
@@ -70,7 +70,6 @@ app.get('/api/readall', (req, res) => {
     })();
     });
 
-    // update
     app.put('/api/update/:item_id', (req, res) => {
     (async () => {
     try {
@@ -86,7 +85,7 @@ app.get('/api/readall', (req, res) => {
     })();
     });
 
-    // delete
+
     app.delete('/api/delete/:item_id', (req, res) => {
     (async () => {
     try {
